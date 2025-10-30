@@ -1,12 +1,43 @@
-# React + Vite
+# 🌦️ Weather Forecast App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Weather Forecast App** built using **React + Vite**.  
+It provides **real-time weather updates** with dynamic backgrounds, elegant glassmorphism UI, and smooth weather-based animations.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search by City:** Get instant weather data by city name.  
+- 🌡️ **Live Weather Info:** Displays temperature, humidity, and weather condition.  
+- 🎨 **Dynamic Backgrounds:** Weather-based visuals (sunny, rain, snow, etc.)  
+- ⚡ **Fast & Lightweight:** Powered by React + Vite for smooth performance.  
+- 📱 **Responsive Design:** Works perfectly on mobile, tablet, and desktop.  
+- 💫 **Animated Weather Icons** with modern UI effects.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + Vite  
+- **Styling:** CSS3 (Glassmorphism + Animations)  
+- **API:** [OpenWeatherMap API](https://openweathermap.org/api)  
+- **Version Control:** Git & GitHub
+
+---
+
+## 📦 Installation & Setup
+
+Follow these steps to run the project locally:
+
+```bash
+# 1️⃣ Clone this repository
+git clone https://github.com/Priyanka011k/WeatherForecast.git
+
+# 2️⃣ Go to the project folder
+cd WeatherForecast
+
+# 3️⃣ Install dependencies
+npm install
+
+# 4️⃣ Start the development server
+npm run dev
