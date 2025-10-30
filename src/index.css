@@ -1,0 +1,168 @@
+/* ================== Reset ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================== Background ================== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/weather-bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #fff;
+  transition: background 0.5s ease-in-out;
+}
+
+/* ================== Main Container ================== */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ================== Glassmorphism Card ================== */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px; /* Expands to large screen */
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== Input & Search ================== */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.search-box input {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 70%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+}
+
+.search-box button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.search-box button:hover {
+  background: linear-gradient(135deg, #0056cc, #0094cc);
+  transform: scale(1.05);
+}
+
+/* ================== Weather Info ================== */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.temp {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ================== Details ================== */
+.details {
+  margin-top: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.details li {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+/* ================== Footer or Forecast Section ================== */
+.forecast {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.forecast h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .temp {
+    font-size: 2.5rem;
+  }
+
+  .weather-icon {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

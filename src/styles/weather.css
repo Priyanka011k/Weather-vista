@@ -1,0 +1,177 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ---------- Layout ---------- */
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  padding: 1.25rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+}
+
+/* ---------- Card ---------- */
+.card {
+  width: 90%;
+  max-width: 700px; /* wider on desktop, still responsive */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* ---------- Headings ---------- */
+.h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.subtle {
+  opacity: 0.9;
+}
+
+/* ---------- Icon styles ---------- */
+.icon-large {
+  font-size: 100px;
+  line-height: 1;
+  margin: 0.5rem 0 1rem;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* ---------- Weather Animations ---------- */
+.sunny {
+  animation: sunPulse 3.2s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(255, 215, 0, 0));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.45));
+  }
+}
+
+.rainy::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin: 6px auto 0;
+  background: repeating-linear-gradient(
+    -60deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.35) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  border-radius: 9999px;
+  animation: rainSlide 1.4s linear infinite;
+}
+@keyframes rainSlide {
+  0% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-12px);
+    opacity: 0.7;
+  }
+}
+
+.thunder {
+  animation: flash 2.6s infinite;
+}
+@keyframes flash {
+  0%, 85%, 100% {
+    filter: brightness(1);
+  }
+  88%, 90% {
+    filter: brightness(1.45);
+  }
+}
+
+/* ---------- Background themes ---------- */
+.bg-clear        { background: url("/clear.jpg") no-repeat center center/cover; }
+.bg-clouds       { background: url("/clouds.jpg") no-repeat center center/cover; }
+.bg-rain         { background: url("/rain.jpg") no-repeat center center/cover; }
+.bg-snow         { background: url("/snow.jpg") no-repeat center center/cover; }
+.bg-thunderstorm { background: url("/thunderstorm.jpg") no-repeat center center/cover; }
+.bg-drizzle      { background: url("/drizzle.jpg") no-repeat center center/cover; }
+.bg-mist,
+.bg-haze,
+.bg-fog          { background: url("/mist.jpg") no-repeat center center/cover; }
+.bg-default      { background: url("/default.jpg") no-repeat center center/cover; }
+
+/* ---------- Inputs & Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.input {
+  background: #fff;
+  color: #111;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  padding: 0.55rem 0.8rem;
+  width: 16rem;
+  outline: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    padding: 1.2rem;
+  }
+
+  .icon-large {
+    font-size: 70px;
+  }
+
+  .h1 {
+    font-size: 1.8rem;
+  }
+}
