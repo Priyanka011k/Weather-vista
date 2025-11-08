@@ -41,3 +41,15 @@ npm install
 
 # 4️⃣ Start the development server
 npm run dev
+
+---
+## 💻 Screenshot
+
+Here’s a preview of the **Weather-vista Dashboard** interface 👇  
+
+![Weather-vista Dashboard Screenshot](![Weathervista png](![weather png (2)](https://github.com/user-attachments/assets/024298a3-eb87-44de-b6d8-060e85bd4b26)
+)
+)
+
+
+
