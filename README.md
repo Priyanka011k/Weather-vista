@@ -47,7 +47,8 @@ npm run dev
 
 Here’s a preview of the **Weather-vista Dashboard** interface 👇  
 
-![Weather-vista Dashboard Screenshot](![Weathervista png](![weather png (2)](https://github.com/user-attachments/assets/024298a3-eb87-44de-b6d8-060e85bd4b26)
+![Weather-vista Dashboard Screenshot](![Weathervista png](![weather png (2)](![weather png (2)](https://github.com/user-attachments/assets/0bb3b110-5000-4874-925e-8e6db0ae716c)
+)
 )
 )
 
